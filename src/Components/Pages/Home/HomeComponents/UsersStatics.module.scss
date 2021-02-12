@@ -1,0 +1,30 @@
+.section {
+  height: fit-content;
+  min-height: 80vh;
+  .section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    min-height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    .statics__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // height: 100%;
+      // width: 100%;
+      // flex-wrap: wrap;
+      .statics__logo {
+        border: gray solid 2px;
+        height: 4rem;
+        width: 4rem;
+        margin: 1rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}

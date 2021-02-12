@@ -1,0 +1,30 @@
+.section {
+  height: 100vh;
+  // width: 100vw;
+  overflow: hidden;
+  .container {
+    height: 100%;
+    width: 100;
+    .groups {
+      height: 40%;
+    }
+  }
+}
+
+.card__container {
+  width: 100%;
+  height: 100%;
+  .card {
+    width: 100%;
+    height: 100%;
+    border: gray solid 2px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    margin: 0.5rem;
+
+    img {
+      height: 50%;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.events__section {
+  height: auto;
+  // min-height: 100vh;
+  .events__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    .title__container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+    }
+    .events__card__container {
+      .events__card__group {
+        display: flex;
+        // align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .events__card {
+          width: 30%;
+          border: solid gray 2px;
+          text-align: center;
+          h2 {
+            background-color: #8f0000;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

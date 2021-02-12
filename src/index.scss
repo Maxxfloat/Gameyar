@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "sahel";
+  src: url("./Components/Assets/Fonts/Sahel.woff");
+}
+
+@font-face {
+  font-family: "sahel";
+  src: url("./Components/Assets/Fonts/Sahel-Bold.woff");
+  font-weight: bold;
+}
+
+@mixin placeholderFontFamily {
+  font-family: "sahel";
+}
+
+* {
+  font-family: "sahel";
+  scrollbar-color: #88af86 #f1f1a9;
+  scrollbar-width: 10px;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1a9;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #88af86;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  // Placeholder font family
+  &::-webkit-input-placeholder {
+    @include placeholderFontFamily();
+  }
+
+  &:-ms-input-placeholder {
+    @include placeholderFontFamily();
+  }
+
+  &:-moz-placeholder {
+    @include placeholderFontFamily();
+  }
+
+  &::-moz-placeholder {
+    @include placeholderFontFamily();
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

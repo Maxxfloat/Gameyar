@@ -1,0 +1,10 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: fit-content;
+  border: solid gray 5px;
+  border-radius: 15px;
+}

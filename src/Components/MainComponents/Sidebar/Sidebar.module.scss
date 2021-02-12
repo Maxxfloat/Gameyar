@@ -1,0 +1,102 @@
+@mixin customScrollbar {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1a9;
+    border-radius: 6px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: blue;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+    border-radius: 4px;
+  }
+}
+
+.sidebar__section {
+  height: 100%;
+  width: 15rem;
+  display: flex;
+  direction: rtl;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  right: 0;
+  background-color: #1b004e;
+  transition: 350ms;
+  overflow-x: hidden;
+  // @media (min-width: 37rem) {
+  //   position: static;
+  // }
+}
+
+.sidebar__close {
+  height: 100%;
+  width: 0px;
+  display: flex;
+  direction: rtl;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  right: 0;
+  background-color: #1b004e;
+  transition: 350ms;
+  overflow-x: hidden;
+  // @media (min-width: 37rem) {
+  //   position: static;
+  //   width: 15rem;
+  // }
+}
+
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  //
+  // flex-direction: row-reverse;
+  .sidebar__close__toggle {
+    color: white;
+    background-color: transparent;
+    font-size: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    @media (min-width: 37rem) {
+      font-size: 3rem;
+    }
+  }
+  .sidebar__links__group {
+    height: 90vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0;
+    box-sizing: border-box;
+    @include customScrollbar();
+    li {
+      background-color: #7e62b3;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      box-sizing: border-box;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+    list-style: none;
+  }
+}

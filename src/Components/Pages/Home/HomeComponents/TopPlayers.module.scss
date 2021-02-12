@@ -1,0 +1,46 @@
+.section {
+  height: 100vh;
+  .container {
+    height: 100%;
+    width: 100%;
+    background-color: cyan;
+    .groups {
+      margin: auto;
+      height: 45%;
+      // width: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      background-color: #28004d;
+      h2 {
+        margin: 0.5rem 0;
+      }
+      .slider__container {
+        width: 80%;
+        // height: 80%;
+        background-color: #28004d;
+        @media (min-width: 37rem) {
+          // height: 130%;
+        }
+      }
+    }
+  }
+}
+
+.card__container {
+  // margin: auto;
+  .card {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    border: gray solid 2px;
+    // box-sizing: border-box;
+    // padding: 0.5rem;
+    // margin: 2rem;
+    .card__img {
+      height: 50%;
+      width: 50%;
+    }
+  }
+}
