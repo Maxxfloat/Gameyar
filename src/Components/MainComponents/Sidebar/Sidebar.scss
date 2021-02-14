@@ -25,7 +25,7 @@
 
 .sidebar__section {
   height: 100%;
-  width: 15rem;
+  width: 0rem;
   display: flex;
   direction: rtl;
   position: fixed;
@@ -40,23 +40,23 @@
   // }
 }
 
-.sidebar__close {
-  height: 100%;
-  width: 0px;
-  display: flex;
-  direction: rtl;
-  position: fixed;
-  z-index: 12;
-  top: 0;
-  right: 0;
-  background-color: #1b004e;
-  transition: 350ms;
-  overflow-x: hidden;
-  // @media (min-width: 37rem) {
-  //   position: static;
-  //   width: 15rem;
-  // }
-}
+// .sidebar__close {
+//   height: 100%;
+//   width: 0px;
+//   display: flex;
+//   direction: rtl;
+//   position: fixed;
+//   z-index: 12;
+//   top: 0;
+//   right: 0;
+//   background-color: #1b004e;
+//   transition: 350ms;
+//   overflow-x: hidden;
+//   // @media (min-width: 37rem) {
+//   //   position: static;
+//   //   width: 15rem;
+//   // }
+// }
 
 .sidebar__container {
   display: flex;

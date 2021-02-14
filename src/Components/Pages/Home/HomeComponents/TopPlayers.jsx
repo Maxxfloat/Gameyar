@@ -38,30 +38,28 @@ const TopPlayers = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h2>
-            برترین مربی ها و همتیمی ها
-          </h2>
-          </div>
+          <h2>برترین مربی ها و همتیمی ها</h2>
+        </div>
         <div className={styles.groups}>
           <h2>coaches</h2>
           <div className={styles.slider__container}>
-          <Slider className={styles.slider}  {...settings}>
-            {card}
-            {card}
-            {card}
-            {card}
-          </Slider>
+            <Slider className={styles.slider} {...settings}>
+              {card}
+              {card}
+              {card}
+              {card}
+            </Slider>
           </div>
         </div>
         <div className={styles.groups}>
           <h2>teammates</h2>
           <div className={styles.slider__container}>
-          <Slider className={styles.slider}  {...settings}>
-            {card}
-            {card}
-            {card}
-            {card}
-          </Slider>
+            <Slider className={styles.slider} {...settings}>
+              {card}
+              {card}
+              {card}
+              {card}
+            </Slider>
           </div>
         </div>
       </div>

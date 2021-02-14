@@ -1,28 +1,32 @@
-import React from 'react'
+import React from "react";
 
-import styles from './Events.module.scss'
+import "./Events.scss";
 
 const Events = () => {
-  const match = (<div className={styles.events__card}><h2>EMPTY</h2></div>)
-  const repeat = [match]
-    while (repeat.length < 9 ) {
-    repeat.push(match)
-    }
-    console.log(repeat)
+  const match = (key) => (
+    <div key={key} className="events__card">
+      <h2>EMPTY</h2>
+    </div>
+  );
+  const repeat = [match];
+  while (repeat.length < 9) {
+    console.log("Event repeat: ", repeat.length);
+    repeat.push(match(repeat.length));
+  }
   return (
-    <div className={styles.events__section}>
-      <div className={styles.events__container}>
-        <div className={styles.title__container}>
+    <div className="events__section">
+      <div className="events__container">
+        <div className="title__container">
           <h1>مسابقات برگزار شده توسط گیمبا</h1>
         </div>
-        <div className={styles.events__card__container}>
-          <div className={styles.events__card__group}>
-            {repeat.map((item)=>item)}
+        <div className="events__card__container">
+          <div className="events__card__group">
+            {repeat.map((item) => item)}
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Events
+export default Events;

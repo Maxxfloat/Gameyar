@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Home.module.scss";
+import "./Home.scss";
 
 import Banner from "./HomeComponents/Banner";
 import TopPlayers from "./HomeComponents/TopPlayers";
@@ -10,7 +10,7 @@ import UsersStatics from "./HomeComponents/UsersStatics";
 
 const Home = () => {
   return (
-    <div className={styles.home__section}>
+    <div className="home__section">
       <Banner />
       <UsersStatics />
       <TopPlayers />

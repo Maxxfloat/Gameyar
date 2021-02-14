@@ -1,42 +1,43 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { createStore } from "redux";
 
 import "./App.scss";
+
+import rootReducer from "../Reducers/sidebarReducer";
 
 import Header from "../MainComponents/Header/Header";
 import Sidebar from "../MainComponents/Sidebar/Sidebar";
 import Modal from "../MainComponents/Modal/Modal";
+
 // --- Pages ---
 import Home from "../Pages/Home/Home";
 import EmptyPage from "../Pages/EmptyPage";
 import Test from "../Pages/Test";
+
 // --- Pages ---
 
 // import Slider from "./Slider";
 
 function App() {
-  const [modal, setModal] = React.useState(false);
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+  // const [modal, setModal] = React.useState(false);
+  // const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
-  React.useEffect(() => {
-    if (!sidebarOpen) {
-      setModal(false);
-    }
-  }, [sidebarOpen]);
+  const store = createStore(rootReducer);
 
   return (
     <div className="app">
       <BrowserRouter>
         <Header
-          sidebarOpen={sidebarOpen}
-          setSidebarOpen={setSidebarOpen}
-          setModal={setModal}
-          modal={modal}
+        // sidebarOpen={sidebarOpen}
+        // setSidebarOpen={setSidebarOpen}
+        // setModal={setModal}
+        // modal={modal}
         />
         <Modal
-          setModal={setModal}
-          modal={modal}
-          setSidebarOpen={setSidebarOpen}
+        // setModal={setModal}
+        // modal={modal}
+        // setSidebarOpen={setSidebarOpen}
         />
         <div style={{ height: "3rem" }} />
         <Switch>
@@ -45,7 +46,7 @@ function App() {
 
           <Route component={EmptyPage} />
         </Switch>
-        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        <Sidebar />
       </BrowserRouter>
     </div>
   );

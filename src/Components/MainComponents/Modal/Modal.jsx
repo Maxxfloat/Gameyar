@@ -1,17 +1,27 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import "./Modal.scss";
 
-const Modal = ({ modal, setModal, setSidebarOpen }) => {
+const Modal = ({ setModalOpen, modalOpen }) => {
   return (
     <div
-      className={modal ? "modal" : "display__none"}
-      onClick={() => {
-        setModal(false);
-        setSidebarOpen(false);
-      }}
+      className={modalOpen ? "modal" : "display__none"}
+      onClick={() => setModalOpen()}
     ></div>
   );
 };
 
-export default Modal;
+function mapStateToPorps(state) {
+  return {
+    modalOpen: state.modalOpen,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setModalOpen: () => dispatch({ type: "MODAL_CLICK" }),
+  };
+}
+
+export default connect(mapStateToPorps, mapDispatchToProps)(Modal);

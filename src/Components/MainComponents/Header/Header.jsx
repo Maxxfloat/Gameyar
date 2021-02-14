@@ -1,10 +1,10 @@
 import React from "react";
 import { MdMenu } from "react-icons/md";
+import { connect } from "react-redux";
 
 import styles from "./Header.module.scss";
 
 const Header = (props) => {
-  console.log("sidebarOpen: ", props.sidebarOpen);
   return (
     <div className={styles.header__section}>
       <div className={styles.header__container}>
@@ -12,8 +12,7 @@ const Header = (props) => {
         <div
           className={styles.sidebar__toggle}
           onClick={() => {
-            props.setSidebarOpen(!props.sidebarOpen);
-            props.setModal(true);
+            props.setSidebarOpen();
           }}
         >
           <MdMenu />
@@ -23,4 +22,10 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSidebarOpen: () => dispatch({ type: "SIDEBAR_TOGGLE_CLICK" }),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Header);
