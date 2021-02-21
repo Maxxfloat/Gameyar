@@ -10,11 +10,15 @@ const Sidebar = ({ sidebarOpen, setSidebarClose }) => {
   const sidebarSection = React.useRef(null);
 
   React.useEffect(() => {
-    console.log("sidebar width: ", sidebarSection.current.style.width);
-    if (sidebarOpen) {
+    let mql = window.matchMedia("(min-width: 38rem)").matches;
+    if (mql) {
       sidebarSection.current.style.width = "15rem";
     } else {
-      sidebarSection.current.style.width = "0px";
+      if (sidebarOpen) {
+        sidebarSection.current.style.width = "15rem";
+      } else {
+        sidebarSection.current.style.width = "0px";
+      }
     }
   }, [sidebarOpen]);
 
@@ -27,7 +31,6 @@ const Sidebar = ({ sidebarOpen, setSidebarClose }) => {
         >
           <AiOutlineCloseSquare />
         </div>
-        {/* <div className={styles.sidebar__links__cotainer}> */}
         <ul className="sidebar__links__group">
           {pages.map((link, index) => (
             <li key={link + index} onClick={() => setSidebarClose()}>
@@ -35,15 +38,15 @@ const Sidebar = ({ sidebarOpen, setSidebarClose }) => {
             </li>
           ))}
         </ul>
-        {/* </div> */}
       </div>
     </div>
   );
 };
 
 const mapStateToProps = (state) => {
+  const sidebar = { ...state.sidebar };
   return {
-    sidebarOpen: state.sidebarOpen,
+    sidebarOpen: sidebar.sidebarOpen,
   };
 };
 

@@ -13,8 +13,9 @@ const Modal = ({ setModalOpen, modalOpen }) => {
 };
 
 function mapStateToPorps(state) {
+  const sidebar = { ...state.sidebar };
   return {
-    modalOpen: state.modalOpen,
+    modalOpen: sidebar.modalOpen,
   };
 }
 

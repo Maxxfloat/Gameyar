@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./index.scss";
 import App from "./Components/Containers/App";
-import reducer from "./Components/Reducers/sidebarReducer";
+import reducer from "./Components/Reducers/rootReducer";
 import { createStore } from "redux";
 
 const store = createStore(reducer);

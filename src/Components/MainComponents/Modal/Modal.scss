@@ -4,6 +4,9 @@
   background-color: #80808042;
   z-index: 10;
   position: fixed;
+  @media (min-width: 38rem) {
+    display: none;
+  }
 }
 
 .display__none {

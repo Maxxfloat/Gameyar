@@ -1,1 +1,10 @@
-
+.app {
+  .app__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    .app__pages__container {
+      flex: 1;
+    }
+  }
+}

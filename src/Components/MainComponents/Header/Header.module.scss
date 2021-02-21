@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   z-index: 1;
-  @media (min-width: 37rem) {
+  @media (min-width: 38rem) {
     height: 4rem;
   }
 }
@@ -24,7 +24,7 @@
 
 .header__banner {
   margin-left: 1rem;
-  @media (min-width: 37rem) {
+  @media (min-width: 38rem) {
     margin-left: 2rem;
   }
 }
@@ -35,7 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (min-width: 37rem) {
-    font-size: 4rem;
+  @media (min-width: 38rem) {
+    // font-size: 4rem;
+    display: none;
   }
 }

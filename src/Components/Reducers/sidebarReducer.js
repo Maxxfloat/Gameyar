@@ -1,5 +1,3 @@
-// import { combineReducers } from "redux";
-
 const initialState = {
   sidebarOpen: false,
   modalOpen: false,
@@ -26,14 +24,9 @@ const sidebarReducer = (state = initialState, action) => {
       };
     }
     default: {
-      return {
-        sidebarOpen: false,
-        modalOpen: false,
-      };
+      return state;
     }
   }
 };
-
-// combineReducers({ sidebarReducer: sidebarReducer });
 
 export default sidebarReducer;

@@ -1,16 +1,11 @@
+@mixin backgroundWhite {
+  background-color: white;
+}
+
 .banner__section {
   height: auto;
-  // min-height: 60rem;
   width: 100%;
-  //   display: flex;
-  //   justify-content: center;
-  // align-items: center;
-  // @media (min-width: 37rem) {
-  //   height: auto;
-  // }
   .banner__container {
-    // height: auto;
-    // min-height: 100%;
     height: 90vh;
     width: 100%;
     display: flex;
@@ -24,8 +19,9 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-      height: 100%;
-      width: 100%;
+      border-radius: 30px;
+      padding: 3rem;
+      background-color: white;
       h2 {
         margin: 0;
         color: black;
@@ -46,6 +42,7 @@
       flex-direction: column;
       height: 100%;
       width: 100%;
+
       @media (min-width: 37rem) {
         flex-direction: row;
         width: 80%;
@@ -61,7 +58,9 @@
         padding: 1rem;
         border: #0000009a solid 2px;
         border-radius: 15px;
+        @include backgroundWhite();
         p {
+          margin: 0.3rem;
           font-size: 1rem;
           color: black;
           text-align: center;

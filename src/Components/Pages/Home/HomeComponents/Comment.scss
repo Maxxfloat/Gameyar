@@ -109,11 +109,19 @@ $inputBorderColor: #008383;
         }
       }
       button {
-        margin: 1rem;
+        font-size: 1rem;
+        margin: 0.5rem;
         padding: 0.5rem;
-        width: 4rem;
-        height: 4rem;
+        width: 5rem;
+        height: 3rem;
         align-self: center;
+        text-align: center;
+        background-color: white;
+        border: #555555 solid 2px;
+        border-radius: 4px;
+        &:active {
+          background-color: #ffffac;
+        }
       }
     }
   }

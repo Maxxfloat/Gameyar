@@ -8,11 +8,11 @@ const Events = () => {
       <h2>EMPTY</h2>
     </div>
   );
-  const repeat = [match];
+  const repeat = [];
   while (repeat.length < 9) {
-    console.log("Event repeat: ", repeat.length);
     repeat.push(match(repeat.length));
   }
+  console.log("Event repeat: ", repeat.length);
   return (
     <div className="events__section">
       <div className="events__container">
